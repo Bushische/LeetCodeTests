@@ -242,7 +242,7 @@ namespace LeetCodeTests
 			/// <summary>
 			/// recursive fill of board
 			/// </summary>
-			/// <returns><c>true</c>, if fill was tryed, <c>false</c> otherwise.</returns>
+			/// <returns><c>true</c>, if fill was filled and solution is correct - true, <c>false</c> otherwise.</returns>
 			/// <param name="board">Board.</param>
 			/// <param name="inRow">In row.</param>
 			/// <param name="inCol">In col.</param>
