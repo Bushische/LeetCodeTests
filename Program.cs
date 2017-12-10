@@ -37,7 +37,8 @@ namespace LeetCodeTests
 			//Problem_0033.Test();
 			//Problem_0036.Test();
 			//Problem_0037.Test();
-			Problem_0039.Test();
+			//Problem_0039.Test();
+			Problem_0043.Test();
 
 			Console.WriteLine("that's all");
 			Console.ReadKey();
