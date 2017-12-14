@@ -43,7 +43,8 @@ namespace LeetCodeTests
 			//Problem_0046.Test();
 			//Problem_0048.Test();
 			//Problem_0042.Test();
-			Problem_0050.Test();
+			//Problem_0050.Test();
+			Problem_0051.Test();		//hard
 
 			Console.WriteLine("that's all");
 			Console.ReadKey();
