@@ -8,6 +8,7 @@ namespace LeetCodeTests
 		{
 			Console.WriteLine("LeetCode tests in c#");
 
+			#region first 50
 			//Problem_0001.Test();
 			//Problem_0002.Test();
 			//Problem_0003.Test();
@@ -44,8 +45,11 @@ namespace LeetCodeTests
 			//Problem_0048.Test();
 			//Problem_0042.Test();
 			//Problem_0050.Test();
+			#endregion
+
 			//Problem_0051.Test();		//hard
-			Problem_0054.Test();		//medium
+			//Problem_0054.Test();		//medium
+			Problem_0056.Test();		//medium
 
 			Console.WriteLine("that's all");
 			Console.ReadKey();
