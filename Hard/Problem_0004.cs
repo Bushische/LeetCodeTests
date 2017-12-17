@@ -49,7 +49,7 @@ Expected: 2.00000
 		4. if size of array is 1 - median = A[0]
 		5. if size of array is 2 - median = (A[0]+A[1]) / 2
 		*/
-		public static void Test()
+		public static void Test()		// NOT SOLVED!!!
 		{
 			Solution sol = new Solution();
 
