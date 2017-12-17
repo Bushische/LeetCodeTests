@@ -24,6 +24,29 @@ namespace LeetCodeTests
 			return res;
 		}
 
+		public static string Print2DArray<T>(T[,] obj)
+		{
+			string res = "[";
+			int m = obj.GetLength(0);
+			int n = obj.GetLength(1);
+			for (int i = 0; i < m; i++)
+			{
+				res += "[";
+				for (int j = 0; j < n; j++)
+				{
+					res += " " + obj[i, j].ToString() + ",";
+				}
+				if (res[res.Length - 1] == ',')
+					res = res.Substring(0, res.Length - 1);
+				res += "]";
+				if (i < m - 1)
+					res += ",\n";
+			}
+			if (res[res.Length - 1] == ',')
+					res = res.Substring(0, res.Length - 1);
+			return res + "]";
+		}
+
 		public static string PrintList(ListNode head)
 		{
 			if (head == null)
