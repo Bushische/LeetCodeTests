@@ -40,7 +40,7 @@ namespace LeetCodeTests
 					res = res.Substring(0, res.Length - 1);
 				res += "]";
 				if (i < m - 1)
-					res += ",\n";
+					res += ",\n ";
 			}
 			if (res[res.Length - 1] == ',')
 					res = res.Substring(0, res.Length - 1);
