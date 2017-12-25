@@ -39,6 +39,25 @@ If nums = [1, 2, 3], a solution is:
 			Console.WriteLine($"for input '{Utils.PrintArray(nums)}' -> '{Utils.PrintArray(sol.Subsets(nums))}'");
 		}
 
+
+		public class Solution_Binary
+		{
+			/*
+have array of numbers. Need find all combinations.
+If we present set as binary map 0010100 where 1 mean using number from NUMS at same position, we need just pass through all numbers
+starts from 0 to 2^(NUMS.length)
+We need (NUMS.length / 32)+1 int numbers to present all possibilities
+			*/
+			public IList<IList<int>> Subsets(int[] nums)
+			{
+				List<IList<int>> resList = new List<IList<int>>();
+				return resList;
+			}
+		}
+
+         /// <summary>
+         /// Recursive solution
+         /// </summary>
 		public class Solution
 		{
 			public IList<IList<int>> Subsets(int[] nums)
