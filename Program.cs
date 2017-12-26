@@ -65,7 +65,8 @@ namespace LeetCodeTests
 			//Problem_0077.Test();		//medium
 			//Problem_0078.Test();		//medium
 			//Problem_0082.Test();		//medium
-			Problem_0086.Test();		//medium
+			//Problem_0086.Test();		//medium
+			Problem_0067.Test();		//easy
 
 			Console.WriteLine("that's all");
 			Console.ReadKey();
