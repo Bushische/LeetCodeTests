@@ -146,7 +146,10 @@ Note that f[i][j] only depends on f[i - 1][j - 1], f[i - 1][j] and f[i][j - 1], 
 	return f[l2];
 
 }
-Actually at first glance I thought this question was similar to Word Ladder and I tried to solve it using BFS(pretty stupid huh?). But in fact, the main difference is that there's a strict restriction on the intermediate words in Word Ladder problem, while there's no restriction in this problem.If we added some restriction on intermediate words for this question, I don't think this DP solution would still work.
+Actually at first glance I thought this question was similar to Word Ladder and I tried to solve it using BFS(pretty stupid huh?). 
+But in fact, the main difference is that there's a strict restriction on the intermediate words in Word Ladder problem, 
+while there's no restriction in this problem.If we added some restriction on intermediate words for this question, 
+I don't think this DP solution would still work.
 		*/
 
 		public class Solution_too_long_and_not_optimal
