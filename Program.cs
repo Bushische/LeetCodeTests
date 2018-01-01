@@ -68,7 +68,8 @@ namespace LeetCodeTests
 			//Problem_0086.Test();		//medium
 			//Problem_0067.Test();		//easy
 			//Problem_0058.Test();		//easy
-			Problem_0079.Test();		//medium
+			//Problem_0079.Test();		//medium
+			Problem_0087.Test();		//hard
 
 			//TODO: Problem_0084; 		//hard
 
