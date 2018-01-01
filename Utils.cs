@@ -78,4 +78,21 @@ namespace LeetCodeTests
 			return val.ToString() + ((next == null) ? "" : (" -> " + next.PrintList()));
 		}
 	}
+
+	/// <summary>
+	/// Benchmark.
+	/// </summary>
+	public static class Benchmark
+	{
+		private static DateTime _start;
+		public static void Start()
+		{
+			_start = DateTime.Now;
+		}
+
+		public static TimeSpan Finish()
+		{
+			return DateTime.Now - _start;
+		}
+	}// Benchmark
 }
