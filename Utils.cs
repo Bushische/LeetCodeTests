@@ -5,6 +5,11 @@ namespace LeetCodeTests
 {
 	public static class Utils
 	{
+		/// <summary>
+		/// Prints the array of objects
+		/// </summary>
+		/// <returns>The array.</returns>
+		/// <param name="obj">Object.</param>
 		public static string PrintArray(object obj)
 		{
 			string res = "";
@@ -24,6 +29,12 @@ namespace LeetCodeTests
 			return res;
 		}
 
+		/// <summary>
+		/// Print 2D array. 
+		/// </summary>
+		/// <returns>The DA rray.</returns>
+		/// <param name="obj">Object.</param>
+		/// <typeparam name="T">The 1st type parameter.</typeparam>
 		public static string Print2DArray<T>(T[,] obj)
 		{
 			string res = "[";
@@ -47,6 +58,11 @@ namespace LeetCodeTests
 			return res + "]";
 		}
 
+		/// <summary>
+		/// Print List (ListNode class)
+		/// </summary>
+		/// <returns>The list.</returns>
+		/// <param name="head">Head.</param>
 		public static string PrintList(ListNode head)
 		{
 			if (head == null)
@@ -55,6 +71,12 @@ namespace LeetCodeTests
 				return head.val.ToString() + ((head.next == null) ? "" : ":" + PrintList(head.next));
 		}
 
+		/// <summary>
+		/// Create a list based on int array
+		/// </summary>
+		/// <returns>The list.</returns>
+		/// <param name="inArr">In arr.</param>
+		/// <param name="index">Index.</param>
 		public static ListNode GenerateList(int[] inArr, int index = 0)
 		{
 			if (index >= inArr.Length)
@@ -64,6 +86,25 @@ namespace LeetCodeTests
 			res.next = GenerateList(inArr, index + 1);
 			return res;
 		}
+
+		/// <summary>
+		/// Get bit view of integer. Minimal length if length is not passed and length is equal to passed value otherwise.
+		/// </summary>
+		/// <returns>The bit view.</returns>
+		/// <param name="n">N.</param>
+		/// <param name="length">Length.</param>
+		public static string GetBitView(int n, int length = 0)
+		{
+			string res = "";
+			while (((length == 0) && (n > 0))
+				   || ((length > 0) && (res.Length < length)))
+			{
+				res = (n & 1).ToString() + res;
+				n = n >> 1;
+			}
+			return res;
+		}
+
 	}//
 
 	/*** Additional classes ***/
