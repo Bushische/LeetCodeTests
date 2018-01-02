@@ -98,6 +98,7 @@
     <Compile Include="Easy\Problem_0088.cs" />
     <Compile Include="Medium\Problem_0089.cs" />
     <Compile Include="Medium\Problem_0091.cs" />
+    <Compile Include="Medium\Problem_0092.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Easy\" />
