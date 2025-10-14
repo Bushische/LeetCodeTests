@@ -1,9 +1,11 @@
-﻿
+
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.2036
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeetCodeTests", "LeetCodeTests.csproj", "{BB5FB1DF-C779-45C0-BDCF-4218823EF1AE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeetCodeTests", "./LeetCodeTests/LeetCodeTests.csproj", "{BB5FB1DF-C779-45C0-BDCF-4218823EF1AE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeetCodeTests.UnitTests", ".\LeetCodeTests.UnitTests\LeetCodeTests.UnitTests.csproj", "{A1C2D3E4-1234-4A5B-8C9D-0E1F2A3B4C5D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{BB5FB1DF-C779-45C0-BDCF-4218823EF1AE}.Debug|x86.Build.0 = Debug|x86
 		{BB5FB1DF-C779-45C0-BDCF-4218823EF1AE}.Release|x86.ActiveCfg = Release|x86
 		{BB5FB1DF-C779-45C0-BDCF-4218823EF1AE}.Release|x86.Build.0 = Release|x86
+		{A1C2D3E4-1234-4A5B-8C9D-0E1F2A3B4C5D}.Debug|x86.ActiveCfg = Debug|x86
+		{A1C2D3E4-1234-4A5B-8C9D-0E1F2A3B4C5D}.Debug|x86.Build.0 = Debug|x86
+		{A1C2D3E4-1234-4A5B-8C9D-0E1F2A3B4C5D}.Release|x86.ActiveCfg = Release|x86
+		{A1C2D3E4-1234-4A5B-8C9D-0E1F2A3B4C5D}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,2 +1,12 @@
 Debug
 /.vs/LeetCodeTests/v15
+bin 
+obj
+.vs
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+.vscode
+task.json
+.DS_Store
