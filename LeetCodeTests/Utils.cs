@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using System.Collections.Generic;
 
 namespace LeetCodeTests
 {
@@ -117,6 +118,32 @@ namespace LeetCodeTests
 		public string PrintList()
 		{
 			return val.ToString() + ((next == null) ? "" : (" -> " + next.PrintList()));
+		}
+
+		public static bool AreEqualTo(ListNode oldList, ListNode newList)
+		{
+			var thisListStr = oldList?.PrintList() ?? "";
+			var thatListStr = newList?.PrintList() ?? "";
+			return thisListStr == thatListStr;
+        }
+
+		/// <summary>
+		/// Create a list from array
+		/// </summary>
+		/// <param name="list"></param>
+		/// <returns></returns>
+		public static ListNode CreateFromTheList(List<int> list)
+		{
+			ListNode head = null;
+			var prevNode = head;
+			foreach (int elem in list)
+			{
+				var newNode = new ListNode(elem);
+				if (prevNode != null) prevNode.next = newNode;
+				head ??= newNode;
+				prevNode = newNode;
+			}
+			return head;
 		}
 	}
 
