@@ -1,12 +1,12 @@
 using System.Runtime.Intrinsics.Arm;
 using NUnit.Framework;
 
-namespace LeetCodeTests
+namespace LeetCodeTests.Hard
 {
     [TestFixture]
     public class Problem_0087Tests
     {
-        [TestCase("rgeat", "great", true)]      //true
+        [TestCase("rgeat", "great", true)] //true
         [TestCase("rgtae", "great", true)]
         [TestCase("rtgae", "great", false)]
         [TestCase("dcba", "abcd", true)]
@@ -21,7 +21,11 @@ namespace LeetCodeTests
         {
             var sol = new Problem_0087.Solution();
             bool actual = sol.IsScramble(s1, s2);
-            Assert.AreEqual(expected, actual, $"IsScramble(\"{s1}\", \"{s2}\") should be {expected}");
+            Assert.AreEqual(
+                expected,
+                actual,
+                $"IsScramble(\"{s1}\", \"{s2}\") should be {expected}"
+            );
         }
 
         [Test]
@@ -32,7 +36,11 @@ namespace LeetCodeTests
             bool expected = true;
             var sol = new Problem_0087.Solution();
             bool actual = sol.IsScramble(s1, s2);
-            Assert.AreEqual(expected, actual, $"IsScramble(\"{s1}\", \"{s2}\") should be {expected}");
+            Assert.AreEqual(
+                expected,
+                actual,
+                $"IsScramble(\"{s1}\", \"{s2}\") should be {expected}"
+            );
         }
     }
 }
