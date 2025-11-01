@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace LeetCodeTests
 {
@@ -164,6 +165,55 @@ namespace LeetCodeTests
             this.val = val;
             this.left = left;
             this.right = right;
+        }
+
+        public static TreeNode ConvertArrayToTree(int?[] treeNodes)
+        {
+            // input array contains data by levels
+            // we need to use stack to correctly build the result
+            if ((treeNodes == null) || (treeNodes.Length == 0))
+                return null;
+
+            TreeNode head;
+            var nodesQueue = new Queue<TreeNode>(); // here we keep all created nodes
+
+            // head
+            var headValue = treeNodes[0];
+            if (headValue == null)
+                return null;
+            head = new TreeNode(headValue.Value);
+            nodesQueue.Enqueue(head);
+
+            // subnodes
+            var inputIndex = 1;
+            while (inputIndex < treeNodes.Length)
+            {
+                var curNode = nodesQueue.Dequeue();
+
+                var leftVal = treeNodes[inputIndex];
+                inputIndex++;
+                int? rightVal = null;
+                if (inputIndex < treeNodes.Length)
+                {
+                    rightVal = treeNodes[inputIndex];
+                    inputIndex++;
+                }
+
+                if (leftVal.HasValue)
+                {
+                    var newNode = new TreeNode(leftVal.Value);
+                    nodesQueue.Enqueue(newNode);
+                    curNode.left = newNode;
+                }
+                if (rightVal.HasValue)
+                {
+                    var newNode = new TreeNode(rightVal.Value);
+                    nodesQueue.Enqueue(newNode);
+                    curNode.right = newNode;
+                }
+            }
+
+            return head;
         }
     }
 
