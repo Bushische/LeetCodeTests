@@ -215,6 +215,26 @@ namespace LeetCodeTests
 
             return head;
         }
+
+        /// <summary>
+        ///  Convert tree to array representation (exactly as input for ConvertArrayToTree)
+        /// </summary>
+        /// <param name="root"></param>
+        /// <returns></returns>
+        // public static int?[] ConvertTreeToArray(TreeNode root) { }
+
+        /// <summary>
+        /// Compare tree to another tree
+        /// </summary>
+        /// <param name="head2"></param>
+        /// <returns></returns>
+        public bool CompareToTree(TreeNode head2)
+        {
+            return (head2 != null)
+                && (this.val == head2.val)
+                && (this.left?.CompareToTree(head2.left) ?? (head2.left is null))
+                && (this.right?.CompareToTree(head2.right) ?? (head2.right is null));
+        }
     }
 
     /// <summary>
