@@ -2,11 +2,11 @@
 
 namespace LeetCodeTests
 {
-	class MainClass
-	{
-		public static void Main(string[] args)
-		{
-			Console.WriteLine("LeetCode tests in c#");
+    class MainClass
+    {
+        public static void Main(string[] args)
+        {
+            Console.WriteLine("LeetCode tests in c#");
 
             #region first 50
             //Problem_0001.Test();
@@ -71,7 +71,7 @@ namespace LeetCodeTests
             //Problem_0067.Test();		//easy
             //Problem_0058.Test();		//easy
             //Problem_0079.Test();		//medium
-            Problem_0087.Test();		//hard
+            Problem_0087.Test(); //hard
             //Problem_0088.Test();		//easy
             //Problem_0089.Test();		//medium
             //Problem_0091.Test();		//medium
@@ -81,7 +81,7 @@ namespace LeetCodeTests
             //TODO: Problem_0084; 		//hard
 
             Console.WriteLine("that's all");
-			Console.ReadKey();
-		}
-	}
+            Console.ReadKey();
+        }
+    }
 }

@@ -1,13 +1,13 @@
 using System;
-using System.Collections.Generic;
 using System.Collections;
+using System.Collections.Generic;
 using System.Collections.Specialized;
 
 namespace LeetCodeTests.Easy
 {
-	public abstract class Problem_70
+    public abstract class Problem_70
     {
-		/*
+        /*
 You are climbing a staircase. It takes n steps to reach the top.
 
 Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top?
@@ -51,16 +51,16 @@ And we get Fibonacci sequence. With a small adjustment: for calculation i-th ele
 Constraints:
 
 1 <= n <= 45
-		*/
-		public static void Test()
-		{
-			Solution sol = new Solution();
+        */
+        public static void Test()
+        {
+            Solution sol = new Solution();
 
-			/*
-			var input = new int[] { 2, 7, 11, 15 };
-			Console.WriteLine($"Input array: {string.Join(", ", input)}");
-			*/
-		}
+            /*
+            var input = new int[] { 2, 7, 11, 15 };
+            Console.WriteLine($"Input array: {string.Join(", ", input)}");
+            */
+        }
 
         public class Solution
         {
@@ -79,5 +79,5 @@ Constraints:
                 return n1;
             }
         }
-	}//public abstract class Problem_0070
+    } //public abstract class Problem_0070
 }
