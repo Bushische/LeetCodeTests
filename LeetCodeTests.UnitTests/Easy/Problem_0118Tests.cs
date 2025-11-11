@@ -34,8 +34,8 @@ namespace LeetCodeTests.Easy
             var sol = new Solution();
             var res = sol.Generate(rowNumber).ToArray();
 
-            var convertedExpected = Utils.GetInvariantListOfList(expected);
-            var convertedResult = Utils.GetInvariantListOfList(res);
+            var convertedExpected = TestUtils.GetInvariantListOfList(expected);
+            var convertedResult = TestUtils.GetInvariantListOfList(res);
             Assert.AreEqual(convertedExpected, convertedResult);
         }
     }

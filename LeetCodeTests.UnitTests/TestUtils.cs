@@ -2,7 +2,7 @@ using System.Collections.Generic;
 
 namespace LeetCodeTests
 {
-    public static class Utils
+    public static class TestUtils
     {
         /// <summary>
         /// Convert to the same format
