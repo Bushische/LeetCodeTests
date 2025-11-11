@@ -1,6 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Collections;
+using System.Collections.Generic;
 using System.Collections.Specialized;
 
 namespace LeetCodeTests
@@ -17,37 +17,42 @@ Note:
 All numbers (including target) will be positive integers.
 The solution set must not contain duplicate combinations.
 
-For example, given candidate set [10, 1, 2, 7, 6, 1, 5] and target 8, 
-A solution set is: 
+For example, given candidate set [10, 1, 2, 7, 6, 1, 5] and target 8,
+A solution set is:
 [
   [1, 7],
   [1, 2, 5],
   [2, 6],
   [1, 1, 6]
 ]
-		*/
+        */
         public static void Test()
         {
             Solution sol = new Solution();
 
             /*
-			var input = new int[] { 2, 7, 11, 15 };
-			Console.WriteLine($"Input array: {string.Join(", ", input)}");
-			*/
+            var input = new int[] { 2, 7, 11, 15 };
+            Console.WriteLine($"Input array: {string.Join(", ", input)}");
+            */
             int[] inList = new int[] { 10, 1, 2, 7, 6, 1, 5 };
             int target = 8;
             var outList = sol.CombinationSum2(inList, target);
-            Console.WriteLine($"Input: {Utils.PrintArray(inList)}, target : {target}, output: {Utils.PrintArray(outList)}");
+            Console.WriteLine(
+                $"Input: {Utils.PrintArray(inList)}, target : {target}, output: {Utils.PrintArray(outList)}"
+            );
 
             target = 40;
             outList = sol.CombinationSum2(inList, target);
-            Console.WriteLine($"Input: {Utils.PrintArray(inList)}, target : {target}, output: {Utils.PrintArray(outList)}");
+            Console.WriteLine(
+                $"Input: {Utils.PrintArray(inList)}, target : {target}, output: {Utils.PrintArray(outList)}"
+            );
 
             inList = new int[0];
             target = 40;
             outList = sol.CombinationSum2(inList, target);
-            Console.WriteLine($"Input: {Utils.PrintArray(inList)}, target : {target}, output: {Utils.PrintArray(outList)}");
-
+            Console.WriteLine(
+                $"Input: {Utils.PrintArray(inList)}, target : {target}, output: {Utils.PrintArray(outList)}"
+            );
         }
 
         public class Solution
@@ -109,5 +114,5 @@ A solution set is:
                 ResList.Add(newVar);
             }
         }
-    }//public abstract class Problem_
+    } //public abstract class Problem_
 }

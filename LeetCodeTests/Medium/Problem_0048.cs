@@ -1,13 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Collections;
+using System.Collections.Generic;
 using System.Collections.Specialized;
 
 namespace LeetCodeTests
 {
-	public abstract class Problem_0048
-	{
-		/*
+    public abstract class Problem_0048
+    {
+        /*
 You are given an n x n 2D matrix representing an image.
 
 Rotate the image by 90 degrees (clockwise).
@@ -38,7 +38,7 @@ Given input matrix =
   [ 2, 4, 8,10],
   [13, 3, 6, 7],
   [15,14,12,16]
-], 
+],
 
 rotate the input matrix in-place such that it becomes:
 [
@@ -47,49 +47,59 @@ rotate the input matrix in-place such that it becomes:
   [12, 6, 8, 9],
   [16, 7,10,11]
 ]
-		*/
-		public static void Test()
-		{
-			Solution sol = new Solution();
+        */
+        public static void Test()
+        {
+            Solution sol = new Solution();
 
-			/*
-			var input = new int[] { 2, 7, 11, 15 };
-			Console.WriteLine($"Input array: {string.Join(", ", input)}");
-			*/
-			var input = new int[3, 3] {{ 1,2,3},{ 4, 5, 6},{ 7, 8, 9} };
-			Console.WriteLine($"for input:");
-			Console.WriteLine(Utils.PrintArray(input));
-			sol.Rotate(input);
-			Console.WriteLine($"output:");
-			Console.WriteLine(Utils.PrintArray(input));
+            /*
+            var input = new int[] { 2, 7, 11, 15 };
+            Console.WriteLine($"Input array: {string.Join(", ", input)}");
+            */
+            var input = new int[3, 3]
+            {
+                { 1, 2, 3 },
+                { 4, 5, 6 },
+                { 7, 8, 9 },
+            };
+            Console.WriteLine($"for input:");
+            Console.WriteLine(Utils.PrintArray(input));
+            sol.Rotate(input);
+            Console.WriteLine($"output:");
+            Console.WriteLine(Utils.PrintArray(input));
 
-			input = new int[4, 4] {{ 5,1,9,11},{2,4,8,10},{13,3,6,7},{15,14,12,16} };
-			Console.WriteLine($"for input:");
-			Console.WriteLine(Utils.PrintArray(input));
-			sol.Rotate(input);
-			Console.WriteLine($"output:");
-			Console.WriteLine(Utils.PrintArray(input));
+            input = new int[4, 4]
+            {
+                { 5, 1, 9, 11 },
+                { 2, 4, 8, 10 },
+                { 13, 3, 6, 7 },
+                { 15, 14, 12, 16 },
+            };
+            Console.WriteLine($"for input:");
+            Console.WriteLine(Utils.PrintArray(input));
+            sol.Rotate(input);
+            Console.WriteLine($"output:");
+            Console.WriteLine(Utils.PrintArray(input));
+        }
 
-		}
-
-		public class Solution
-		{
-			public void Rotate(int[,] matrix)
-			{
-				int N = matrix.GetLength(0);
-				int tmp;
-				for (int row = 0; row < N / 2; row++)
-				{
-					for (int col = row; col < N - row-1; col++)
-					{
-						tmp = matrix[row, col];
-						matrix[row    , col] = matrix[N - col-1, row];
-						matrix[N - col-1, row] = matrix[N - row-1, N - col-1];
-						matrix[N - row-1, N - col-1] = matrix[col, N - row-1];
-						matrix[col, N - row-1] = tmp;
-					} //(0,2) <- (1,0) <- (3,1) <- (2, 3)
-				}
-			}
-		}// solution
-	}//public abstract class Problem_
+        public class Solution
+        {
+            public void Rotate(int[,] matrix)
+            {
+                int N = matrix.GetLength(0);
+                int tmp;
+                for (int row = 0; row < N / 2; row++)
+                {
+                    for (int col = row; col < N - row - 1; col++)
+                    {
+                        tmp = matrix[row, col];
+                        matrix[row, col] = matrix[N - col - 1, row];
+                        matrix[N - col - 1, row] = matrix[N - row - 1, N - col - 1];
+                        matrix[N - row - 1, N - col - 1] = matrix[col, N - row - 1];
+                        matrix[col, N - row - 1] = tmp;
+                    } //(0,2) <- (1,0) <- (3,1) <- (2, 3)
+                }
+            }
+        } // solution
+    } //public abstract class Problem_
 }
