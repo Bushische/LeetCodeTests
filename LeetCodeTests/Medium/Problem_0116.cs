@@ -142,7 +142,7 @@ The recursive approach is fine. You may assume implicit stack space does not cou
             }
 
             // another non-recursive approach
-            public Node Connect(Node root)
+            public Node ConnectAnother(Node root)
             {
                 if (root == null)
                     return root;
@@ -158,8 +158,8 @@ The recursive approach is fine. You may assume implicit stack space does not cou
                     {
                         R.next = N.left;
                     }
-                    Connect(L);
-                    Connect(R);
+                    ConnectAnother(L);
+                    ConnectAnother(R);
                 }
                 return root;
             }

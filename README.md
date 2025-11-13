@@ -1,3 +1,9 @@
+# LeetCode tests
+
+Personal repository for tracking progress on LeetCode problems. Problem descriptions are sourced from LeetCode and remain their property; they are included here only for reference alongside solutions and tests. Refer to LeetCode for the official problem statements and terms of use.
+
+----
+
 # build a specific project
 ```sh
 dotnet build ./LeetCodeTests/LeetCodeTests.csproj
