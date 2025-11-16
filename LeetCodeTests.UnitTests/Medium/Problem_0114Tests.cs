@@ -31,7 +31,6 @@ namespace LeetCodeTests.Medium
             Assert.IsTrue(expectedTree?.CompareToTree(tree) ?? true);
         }
 
-
         [TestCaseSource(nameof(TestDataArray))]
         public void testsO1_VariousCases(int?[] treeNodes, int?[] expectedNodes)
         {
