@@ -70,6 +70,9 @@ nums[i] != nums[i + 1] for all valid i.
 
             //from: https://leetcode.com/problems/find-peak-element/solutions/3291626/easy-to-understand-c-solution-using-bina-so2l/
             // Strange solution
+            //If the mid element is greater than the next element, then the peak lies on the left side (including mid).
+            // Otherwise, the peak lies on the right side.
+            // This works because the slope will always guide us towards a peak.
             public int FindPeakElemen_binary(int[] nums)
             {
                 var left = 0;
