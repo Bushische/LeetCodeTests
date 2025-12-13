@@ -62,7 +62,6 @@ Constraints:
            */
             public int RangeBitwiseAnd_unOptimized(int left, int right)
             {
-                int bitToMove = 30; // to get first element
                 int buffer = 0;
                 for (int shift = 30; shift >= 0; shift--)
                 {
